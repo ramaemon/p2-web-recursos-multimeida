@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --header: 5rem;
+    --footer: 0.2rem;
+    --content: calc(100vh - (var(--header) + var(--footer)));
+}
+$black: #000000;
+$light_pink: #FF4191;
+$pink: #E90074;
+$yellow: #FFF078;
+$white: #fff;
+$list1: #AA5486;
+$list2: #FC8F54;
+$list3: #3C552D;
+$list4: #2A3663;
+$list5: #B6A28E;
+$list6: #800000;
+$list7: #FF7777;
+$list8: #1679AB;
+
+* {
+    margin: 0;
+    font-family: "Work Sans", serif;
+}
+
+html {
+    // height: 100%;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+h2 {
+   margin-bottom: 18px; 
+}
+p {
+    margin-bottom: 15px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        a {
+            padding: 0;
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+        color: $light_pink;
+    }
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    height: var(--header);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    // background-color: rgba($color: $black, $alpha: 0.5);
+    ul {
+        display: flex;
+        padding: 0;
+        li {
+            padding: 20px;
+            color: $light_pink;
+            display: inline-block;
+            position: relative;
+            a {
+                padding: 10px;
+            }
+            // Segon llistat
+            ul {
+                display: none;
+                margin-left: 0;
+            }
+            &:hover {
+                cursor: pointer;
+                ul {
+                    display: block;
+                    position: absolute;
+                    background-color: $pink;
+                    left: 0;
+                    li {
+                        
+                        display: block;
+                        margin-bottom: 5px;
+                        a {
+                            padding: 5px;
+                            color: $white;
+                        }
+                        &:hover {
+                            background-color: $light_pink;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--header) 0 0 0;
+    min-height: var(--content);
+    overflow: hidden;
+    + div {
+        height: var(--content);
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        width: 100%;
+    }
+}
+
+section {
+    min-height: var(--content);
+    display: block;
+    scroll-snap-align: start;
+    &#portada {
+        display: flex;
+        background-image: url(../img/DSC_0260.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: $white;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+            font-size: 100px;
+        }
+    }
+    &#categoria {
+        background-image: url(../img/DSC_0064.jpg);
+        background-position: center;
+        background-size: cover;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+        .categoria-menu {
+            padding-left: 0;
+            margin-top: 40px;
+            li {
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &#presentacio {
+        background-image: 
+        linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+        url(../img/DSC_0138.jpg);
+        background-position: center;
+        background-size: cover;
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+        flex-direction: column;
+    }
+    &.temples {
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        div {
+            &:first-child {
+                min-width: 60vw;
+            }
+            &:last-child {
+                padding: 50px;
+                padding-top: 0;
+                picture {
+                    display: block;
+                    width: 100%;
+                    height: 400px;
+                    min-height: 400px;
+                    margin-bottom: 15px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                h1 {
+                    margin-bottom: 15px;
+                }
+            }
+            ul {
+                li {
+                    padding: 40px;
+                    font-size: 2rem;
+                    transition: all .5s ease;
+                    &:nth-child(1) {
+                        background-color: $list1;
+                    }
+                    &:nth-child(2) {
+                        background-color: $list2;
+                    }
+                    &:nth-child(3) {
+                        background-color: $list3;
+                    }
+                    &:nth-child(4) {
+                        background-color: $list4;
+                    }
+                    &:nth-child(5) {
+                        background-color: $list5;
+                    }
+                    &:nth-child(6) {
+                        background-color: $list6;
+                    }
+                    &:nth-child(7) {
+                        background-color: $list7;
+                    }
+                    &:nth-child(8) {
+                        background-color: $list8;
+                    }
+                    &:hover {
+                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset;
+                        cursor: pointer;
+                        span {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    &.itineraris {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 100px;
+        align-items: stretch;
+        justify-content: center;
+        text-align: center;
+        a {
+            display: flex;
+            .card {
+                width: 150px;
+                display: flex;
+                align-items: center;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            &:nth-child(1) {
+                background-color: $list1;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-este.png);
+                }
+            }
+            &:nth-child(2) {
+                background-color: $list2;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-oest.png);
+                }
+            }
+            &:nth-child(3) {
+                background-color: $list3;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-centre.png);
+                }
+            }
+            &:nth-child(4) {
+                background-color: $list4;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-centre.png);
+                }
+            }
+            &:nth-child(5) {
+                background-color: $list5;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-sur.png);
+                }
+            }
+            &:nth-child(6) {
+                background-color: $list6;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-nara.png);
+                }
+            }
+            &:nth-child(7) {
+                background-color: $list7;
+                &:hover {
+                    background-image: 
+                    linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
+                    url(../img/itinerari-nara.png);
+                }
+            }
+        }
+        
+    }
+    &.detall-itinerari {
+        display: flex;
+        div {
+            width: 50vw;
+            padding: 50px;
+            padding-top: 0;
+        }
+    }
+    &#enllaços {
+        display: flex;
+        background-image: url(../img/DSC_0191.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: $white;
+        justify-content: center;
+        flex-direction: column;
+        a {
+            cursor: pointer;
+        }
+    }
+}
+footer {
+    height: var(--footer);
+    z-index: 99;
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 2rem 0 0 0;
+    }
+    section {
+        &.temples {
+            flex-direction: column;
+            div {
+                &:first-child {
+                    margin-bottom: 20px;
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        li {
+                            padding: 0 !important;
+                            font-size: 1.2rem !important;
+                            a {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    picture {
+                        height: auto;
+                        min-height: auto;
+                    }
+                }
+            }
+        }
+        &.itineraris {
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            justify-content: flex-start;
+            text-align: center;
+            a {
+                display: flex;
+                flex: 1;
+                .card {
+                    width: 100vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            
+        }
+        &.detall-itinerari {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            div {
+                width: 100vw;
+            }
+        }
+    }
+}

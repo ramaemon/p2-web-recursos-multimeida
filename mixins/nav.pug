@@ -1,0 +1,14 @@
+- var menu = [{link: '#portada', title: 'Portada', submenu: false},{link: '#categoria', title: 'Categories', submenu: [{link: 'temples.pug', title: 'Temples'}, {link: 'itineraris.pug', title: 'Itineraris'}] },{link: '#presentacio',title: 'Presentació', submenu: false},{link: 'enllaços.pug',title: 'Enllaços', submenu: false}]
+mixin menu-nav()
+  nav
+    ul
+      each nav in menu
+        if nav.submenu
+          li=nav.title
+            ul
+              each item in nav.submenu
+                li 
+                  a(href=item.link)=item.title
+        else
+          li          
+            a(href=nav.link)=nav.title

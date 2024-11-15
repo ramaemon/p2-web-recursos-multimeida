@@ -1,0 +1,30 @@
+doctype html
+html(lang="ca")
+    head
+        title Japó: Visita Kyoto
+        link(rel="stylesheet", href="css/styles.scss")
+        script(src="js/main.js") 
+    body
+        include  ../mixins/nav.pug
+        +menu-nav()
+    
+        main(class="container")
+            div
+                section(id="portada")
+                    h1 Japó
+                    h2 Visita Kyoto
+                section(id="categoria")
+                    h2 Categories
+                    ul(class="categoria-menu")
+                        li 
+                            a(href="temples.pug") Temples
+                        li 
+                            a(href="itineraris.pug") Itineraris
+                section(id="presentacio")
+                    h2 Presentació
+                    p Kyoto és una de les ciutats més boniques i amb més monuments per la qual cosa permet crear un web atractiu (per les seues fotos) e instructiu. Per això, i per que vaig tindre l'oportunitat de visitar-la en el viatge de noses, quan vaig visitar Japó amb la meua dona. Utilitzar les fotos d'aquest viatge em permet fer el meu treball amb material propi, fent ús de recursos externs minims. El resultat de tot açò és una web on el principal són les imatges que la conformen. 
+                    p Si parlem d'estils s'ha de dir que he utilitzat el preprocesador anomenat Sass, per a poder automatizar la creació de variables i no haver de repetir paràmetres innecessariament. A més a més, s'ha volgut introduir un poc d'animació per fer el web més atractiu durant la seua navegació 
+                    p Pel que fa a la inserció de codi Javascript s'ha considerat utilitzar el mínim possible, per la qual cosa, únicament es fa servir per detectar quan l'usuari fa scroll i poder posar en el menú amb un color pla i que siga visible tota l'estona.
+                    p La navegació dins d'aquesta web és fa eminentment amb l'ús d'enllaços locals. 
+        footer
+            p Rafael Maestre i Montañana
