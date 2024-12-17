@@ -20,11 +20,7 @@ $list8: #1679AB;
 
 * {
     margin: 0;
-    font-family: "Work Sans", serif;
-}
-
-html {
-    // height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,6 +30,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     position: relative;
+    font-family: "Work Sans", serif;
 }
 h2 {
    margin-bottom: 18px; 
@@ -340,16 +337,23 @@ section {
         }
     }
 }
+
 footer {
     height: var(--footer);
     z-index: 99;
     padding: 20px;
 }
+
 @media screen and (max-width: 768px) {
     .container {
         margin: 2rem 0 0 0;
+        overflow: auto;
     }
     section {
+        &#presentacio {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
         &.temples {
             flex-direction: column;
             div {
@@ -357,7 +361,7 @@ footer {
                     margin-bottom: 20px;
                     ul {
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         li {
                             padding: 0 !important;
                             font-size: 1.2rem !important;

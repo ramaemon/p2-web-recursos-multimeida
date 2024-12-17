@@ -4,9 +4,10 @@ html(lang="ca")
         title Kyoto
         link(rel="stylesheet", href="css/styles.scss")
     body
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
-    
+        header
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
+            p a
         main(class="container")
             div
                 section(class="detall-itinerari")
