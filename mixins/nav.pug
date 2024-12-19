@@ -1,6 +1,6 @@
 - var menu = [{link: '#portada', title: 'Portada', submenu: false},{link: '#categoria', title: 'Categories', submenu: [{link: 'temples.pug', title: 'Temples'}, {link: 'itineraris.pug', title: 'Itineraris'}] },{link: '#presentacio',title: 'Presentació', submenu: false},{link: 'enllaços.pug',title: 'Enllaços', submenu: false}]
 mixin menu-nav()
-  nav
+  nav.menu
     ul
       each nav in menu
         if nav.submenu

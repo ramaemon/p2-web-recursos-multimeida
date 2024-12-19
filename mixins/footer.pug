@@ -1,0 +1,7 @@
+- var footer = [{link: '#portada', title: 'Portada'},{link: '#categoria', title: 'Categories'},{link: '#presentacio',title: 'Presentació'},{link: 'enllaços.pug',title: 'Enllaços'}]
+mixin footer()
+  nav
+    ul
+      each item in footer
+        li 
+            a(href=item.link)=item.title
