@@ -22,5 +22,10 @@ html(lang="ca")
                     div
                         img(src="img/itinerari-centre.png")
         footer
-            p Rafael Maestre i Montañana
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg")
+                span Rafael Maestre i Montañana
+            include  ../mixins/footer.pug
+            +footer()
             

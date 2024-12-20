@@ -4,16 +4,16 @@ html(lang="ca")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
     body
-        header
-            a(href="index.pug") 
-                img(src="img/tori-logo.svg")
-            h1 Japó
+        header(class="header")
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg")
+                h1 Japó
             include  ../mixins/nav-external.pug
             +menu-nav-external()
     
-        main(class="container")
+        main(class="container-responsive")
             div
-                object(class="svg", data="img/enllaç.svg", width="60" height="60")
                 section(id="enllaços")
                     h2 Enllaços
                     ul
@@ -25,4 +25,9 @@ html(lang="ca")
                             a(href="https://www.freepik.com/") Imatges vectorials dissenyades per Freepik
                         
         footer
-            p Rafael Maestre i Montañana
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg")
+                span Rafael Maestre i Montañana
+            include  ../mixins/footer.pug
+            +footer()

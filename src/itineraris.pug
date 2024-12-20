@@ -4,8 +4,13 @@ html(lang="ca")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
     body(class="container")
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
+        header(class="header")
+            div
+                    a(href="index.pug") 
+                        img(src="img/tori-logo.svg")
+                    h1 Japó
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
     
         main
             div
@@ -16,3 +21,10 @@ html(lang="ca")
                             div(class=card.outerClass)
                                 div(class=card.innerClass)
                                     h4=card.title
+        footer
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg")
+                span Rafael Maestre i Montañana
+            include  ../mixins/footer.pug
+            +footer()
