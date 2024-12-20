@@ -4,11 +4,16 @@ html(lang="ca")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
     body
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
+        header
+            a(href="index.pug") 
+                img(src="img/tori-logo.svg")
+            h1 Japó
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
     
         main(class="container")
             div
+                object(class="svg", data="img/enllaç.svg", width="60" height="60")
                 section(id="enllaços")
                     h2 Enllaços
                     ul
@@ -16,6 +21,8 @@ html(lang="ca")
                             a(href="https://japonismo.com/" target="_blank") Japonismo
                         li 
                             a(href="https://www.japan-guide.com/" target="_blank") Japan Guide
+                        li
+                            a(href="https://www.freepik.com/") Imatges vectorials dissenyades per Freepik
                         
         footer
             p Rafael Maestre i Montañana

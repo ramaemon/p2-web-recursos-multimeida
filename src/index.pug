@@ -6,7 +6,9 @@ html(lang="ca")
         script(src="js/main.js") 
     body
         header
-            img(src="img/tori-logo.svg")
+            a(href="index.pug") 
+                img(src="img/tori-logo.svg")
+            h1 Japó
             include  ../mixins/nav.pug
             +menu-nav()
     
@@ -14,9 +16,8 @@ html(lang="ca")
             div
                 div(class="clip-path tori")
                 section(id="portada")
-                    
-                    h1 Japó
-                    h2 Visita Kyoto
+                    h2 Japó
+                    h3 Visita Kyoto
                 section(id="categoria")
                     h2 Categories
                     ul(class="categoria-menu")
@@ -31,6 +32,9 @@ html(lang="ca")
                     p Pel que fa a la inserció de codi Javascript s'ha considerat utilitzar el mínim possible, per la qual cosa, únicament es fa servir per detectar quan l'usuari fa scroll i poder posar en el menú amb un color pla i que siga visible tota l'estona.
                     p La navegació dins d'aquesta web és fa eminentment amb l'ús d'enllaços locals. 
         footer
-            span Rafael Maestre i Montañana
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg")
+                span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --header: 5rem;
-  --footer: 0.2rem;
+  --header: 64px;
+  --footer: 50px;
   --content: calc(100vh - (var(--header) + var(--footer)));
 }
 
@@ -38,6 +38,10 @@ ul li a {
   padding: 0;
 }
 
+.responsive {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -49,21 +53,37 @@ a:hover {
 header {
   display: flex;
   flex-direction: row;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: black;
+  width: 100%;
 }
 header img {
   width: 40px;
   height: 40px;
   margin: 10px 20px;
 }
+header h1 {
+  font-size: 20px;
+  padding: 15px;
+}
+
+header.header {
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+}
 
 nav {
   display: flex;
   flex-direction: column;
-  height: var(--header);
   z-index: 99;
 }
 nav.menu {
   width: 100%;
+  height: var(--header);
 }
 nav ul {
   display: flex;
@@ -123,18 +143,91 @@ h2 {
   width: 100%;
 }
 
+.container-responsive {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--header);
+}
+.container-responsive article {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: wrap;
+}
+.container-responsive article aside {
+  min-width: 50%;
+  position: fixed;
+  height: var(--content);
+  top: 64px;
+  display: flex;
+  flex-flow: column wrap;
+}
+.container-responsive article aside nav {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+.container-responsive article aside ul {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+.container-responsive article aside li {
+  display: flex;
+  flex: 1;
+  padding: 0;
+}
+.container-responsive article aside li:nth-child(1) {
+  background-color: #AA5486;
+}
+.container-responsive article aside li:nth-child(2) {
+  background-color: #FC8F54;
+}
+.container-responsive article aside li:nth-child(3) {
+  background-color: #3C552D;
+}
+.container-responsive article aside li:nth-child(4) {
+  background-color: #2A3663;
+}
+.container-responsive article aside li:nth-child(5) {
+  background-color: #B6A28E;
+}
+.container-responsive article aside li:nth-child(6) {
+  background-color: #800000;
+}
+.container-responsive article aside li:nth-child(7) {
+  background-color: #FF7777;
+}
+.container-responsive article aside li:nth-child(8) {
+  background-color: #1679AB;
+}
+.container-responsive article aside li a {
+  padding: 0;
+  flex: 1;
+  display: flex;
+}
+.container-responsive article section {
+  width: 50%;
+  margin-left: 50%;
+  padding: 0 20px 20px 20px;
+}
+.container-responsive article section {
+  flex: 1;
+}
+
 main div {
   position: relative;
 }
 
 section {
   min-height: var(--content);
-  display: block;
   scroll-snap-align: start;
 }
 section#portada {
+  margin-top: var(--header);
   display: flex;
-  background-image: image-set(url(/miyajima-tori_1400.d13f8ec6.jpg) 2x, url(/miyajima-tori_1227.ba515387.jpg) 2x, url(/miyajima-tori_986.519b687b.jpg) 2x);
+  background-image: image-set(url(/miyajima-tori_1400.d13f8ec6.jpg) 2x, url(/miyajima-tori_1227.ba515387.jpg) 2x);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -142,11 +235,14 @@ section#portada {
   justify-content: center;
   flex-direction: column;
 }
-section#portada h1 {
+section#portada h2 {
   font-size: 100px;
 }
+section#portada h3 {
+  font-size: 50px;
+}
 section#categoria {
-  background-image: url(/DSC_0064.9d42cda6.jpg);
+  background-image: image-set(url(/kyoto_1400.6e00b2e3.jpg) 2x, url(/kyoto_1325.a8fb6918.jpg) 2x);
   background-position: center;
   background-size: cover;
   padding-top: 100px;
@@ -162,7 +258,7 @@ section#categoria .categoria-menu li {
   margin-bottom: 30px;
 }
 section#presentacio {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/DSC_0138.1250bfba.jpg);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), image-set(url(/arashiyama_1400.0a904cef.jpg) 2x, url(/arashiyama_1248.5190323d.jpg) 2x);
   background-position: center;
   background-size: cover;
   padding-top: 100px;
@@ -176,7 +272,7 @@ section.temples {
   padding-top: 0;
 }
 section.temples div:first-child {
-  min-width: 60vw;
+  min-width: 50vw;
 }
 section.temples div:last-child {
   padding: 50px;
@@ -190,40 +286,21 @@ section.temples div:last-child picture {
   margin-bottom: 15px;
   overflow: hidden;
 }
-section.temples div:last-child picture img {
+section.temples div:last-child picture .responsive {
   width: 100%;
 }
 section.temples div:last-child h1 {
   margin-bottom: 15px;
 }
+section.temples div ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 section.temples div ul li {
-  padding: 40px;
+  flex-basis: 100%;
   font-size: 2rem;
   transition: all 0.5s ease;
-}
-section.temples div ul li:nth-child(1) {
-  background-color: #AA5486;
-}
-section.temples div ul li:nth-child(2) {
-  background-color: #FC8F54;
-}
-section.temples div ul li:nth-child(3) {
-  background-color: #3C552D;
-}
-section.temples div ul li:nth-child(4) {
-  background-color: #2A3663;
-}
-section.temples div ul li:nth-child(5) {
-  background-color: #B6A28E;
-}
-section.temples div ul li:nth-child(6) {
-  background-color: #800000;
-}
-section.temples div ul li:nth-child(7) {
-  background-color: #FF7777;
-}
-section.temples div ul li:nth-child(8) {
-  background-color: #1679AB;
 }
 section.temples div ul li:hover {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset;
@@ -317,6 +394,26 @@ section#enllaços a {
   cursor: pointer;
 }
 
+.svg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  animation-name: animation-svg;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-svg {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+section.section {
+  min-height: auto;
+  display: initial;
+  scroll-snap-align: start;
+}
+
 .clip-path {
   position: absolute;
   background-image: url(/DSC_0260.3849c7f5.jpg);
@@ -347,14 +444,38 @@ footer {
   display: flex;
   height: var(--footer);
   z-index: 99;
-  padding: 20px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
 }
-footer span {
-  padding: 20px;
+footer div {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+}
+footer div a img {
+  width: 35px;
+}
+footer div span {
+  padding: 10px 20px;
 }
 footer nav {
   align-items: flex-end;
   flex-grow: 1;
+}
+footer nav ul li {
+  padding: 10px;
+}
+
+footer.footer {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -363,7 +484,7 @@ footer nav {
     overflow: auto;
   }
   section#portada {
-    background-image: image-set(url(/miyajima-tori_671.0528f761.jpg) 2x, url(/miyajima-tori_200.deb5fdcc.jpg) 1x);
+    background-image: image-set(url(/miyajima-tori_986.519b687b.jpg) 2x, url(/miyajima-tori_671.0528f761.jpg) 2x);
   }
   section#presentacio {
     padding-left: 50px;
@@ -420,6 +541,21 @@ footer nav {
   }
   section.detall-itinerari div {
     width: 100vw;
+  }
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+  footer div {
+    text-align: center;
+  }
+  footer nav {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 468px) {
+  section#portada {
+    background-image: image-set(url(/miyajima-tori_671.0528f761.jpg) 2x, url(/miyajima-tori_200.deb5fdcc.jpg) 2x);
   }
 }
 
