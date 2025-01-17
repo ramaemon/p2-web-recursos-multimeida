@@ -15,7 +15,7 @@ html(lang="ca")
         main
             div
                 section(class="itineraris")
-                    - var cards = [{link: 'detall-itinerari-est.pug', outerClass: 'card', innerClass: 'card-body', title: 'Itinerari est de Kyoto'},{link: 'detall-itinerari-oest.pug', outerClass: 'card', innerClass: 'card-body', title: 'Itinerari oest de Kyoto'},{link: 'detall-itinerari-centre.pug', outerClass: 'card', innerClass: 'card-body', title: 'Itinerari centre de Kyoto'},{link: 'detall-itinerari-sud.pug', outerClass: 'card', innerClass: 'card-body', title: 'Itinerari sud de Kyoto'}, {link: 'detall-itinerari-nord.pug', outerClass: 'card', innerClass: 'card-body', title: 'Itinerari nord de Kyoto'}, {link: 'detall-itinerari-nara.pug', outerClass: 'card', innerClass: 'card-body', title: 'Altres punts d\'interés'}]
+                    - var cards = [{link: 'detall-itinerari-est.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari est de Kyoto'},{link: 'detall-itinerari-oest.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari oest de Kyoto'},{link: 'detall-itinerari-centre.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari centre de Kyoto'},{link: 'detall-itinerari-sud.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari sud de Kyoto'}, {link: 'detall-itinerari-nord.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari nord de Kyoto'}, {link: 'detall-itinerari-nara.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Altres punts d\'interés'}]
                     each card in cards
                         a(href=card.link)
                             div(class=card.outerClass)

@@ -16,10 +16,10 @@ html(lang="ca")
         main(class="container")
             div
                 div(class="clip-path tori")
-                section(id="portada")
+                section(id="portada", class="lazyload")
                     h2 Japó
                     h3 Visita Kyoto
-                section(id="categoria")
+                section(id="categoria", class="lazyload")
                     h2 Categories
                     a(href="temples.pug") 
                         .card
@@ -36,7 +36,7 @@ html(lang="ca")
                                 img(class="responsive", src="img/itinerari-centre.png", alt="", srcset="")
                             .card-body
                                 h3 Itineraris                          
-                section(id="presentacio")
+                section(id="presentacio", class="lazyload")
                     object(class="svg", data="img/enllaç.svg", width="60" height="60")
                     h2 Presentació
                     p Kyoto és una de les ciutats més boniques i amb més monuments per la qual cosa permet crear un web atractiu (per les seues fotos) e instructiu. Per això, i per que vaig tindre l'oportunitat de visitar-la en el viatge de noses, quan vaig visitar Japó amb la meua dona. Utilitzar les fotos d'aquest viatge em permet fer el meu treball amb material propi, fent ús de recursos externs minims. El resultat de tot açò és una web on el principal són les imatges que la conformen. 

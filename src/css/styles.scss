@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap';
 :root {
     --header: 64px;
     --footer: 50px;
@@ -88,6 +88,9 @@ header {
         }
     }
 }
+
+
+
 nav {
     display: flex;
     flex-direction: column;
@@ -235,11 +238,14 @@ h2 {
     }
 }
 
+
 main {
     div {
         position: relative;
     }
 }
+
+/* Seccions de la pàgina web amb les seues imatges*/
 
 section {
     min-height: var(--content);
@@ -346,6 +352,8 @@ section {
             }
         }
     }
+
+    
     &.itineraris {
         display: flex;
         flex-direction: row;
