@@ -1,14 +1,16 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
-        script(src="js/main.js") 
+        script(async, src="js/main.js") 
     body
         header(class="header")
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 h1 Japó
             include  ../mixins/nav.pug
             +menu-nav()
@@ -27,17 +29,17 @@ html(lang="ca")
                                 picture
                                     source(media="max-width: 1199px", srcset="img/sanjusangendo_1250.jpg")
                                     source(media="min-width: 1200px", srcset="img/sanjusangendo_1400.jpg")
-                                    img(class="responsive", src="img/sanjusangendo_1400.jpg", alt="", srcset="")
+                                    img(class="responsive", src="img/sanjusangendo_1400.jpg", alt="sanjusangendo", srcset="" loading="lazy")
                             .card-body
                                 h3 Temples
                     a(href="itineraris.pug") 
                         .card
                             .card-header
-                                img(class="responsive", src="img/itinerari-centre.png", alt="", srcset="")
+                                img(class="responsive", src="img/itinerari-centre.png", alt="itinerari Japo", srcset="" loading="lazy")
                             .card-body
                                 h3 Itineraris                          
                 section(id="presentacio", class="lazyload")
-                    object(class="svg", data="img/enllaç.svg", width="60" height="60")
+                    object(class="svg", data="img/enllaç.svg", width="60" height="60") És una icona d'un enllaç
                     h2 Presentació
                     p Kyoto és una de les ciutats més boniques i amb més monuments per la qual cosa permet crear un web atractiu (per les seues fotos) e instructiu. Per això, i per que vaig tindre l'oportunitat de visitar-la en el viatge de noses, quan vaig visitar Japó amb la meua dona. Utilitzar les fotos d'aquest viatge em permet fer el meu treball amb material propi, fent ús de recursos externs minims. El resultat de tot açò és una web on el principal són les imatges que la conformen. 
                     p Si parlem d'estils s'ha de dir que he utilitzat el preprocesador anomenat Sass, per a poder automatizar la creació de variables i no haver de repetir paràmetres innecessariament. A més a més, s'ha volgut introduir un poc d'animació per fer el web més atractiu durant la seua navegació 
@@ -46,7 +48,7 @@ html(lang="ca")
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

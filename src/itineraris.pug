@@ -1,18 +1,20 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
     body(class="container")
         header(class="header")
             div
                     a(href="index.pug") 
-                        img(src="img/tori-logo.svg")
+                        img(src="img/tori-logo.svg", alt="Tori: logotip web")
                     h1 Japó
             include  ../mixins/nav-external.pug
             +menu-nav-external()
     
-        main
+        main(class="container-responsive")
             div
                 section(class="itineraris")
                     - var cards = [{link: 'detall-itinerari-est.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari est de Kyoto'},{link: 'detall-itinerari-oest.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari oest de Kyoto'},{link: 'detall-itinerari-centre.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari centre de Kyoto'},{link: 'detall-itinerari-sud.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari sud de Kyoto'}, {link: 'detall-itinerari-nord.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Itinerari nord de Kyoto'}, {link: 'detall-itinerari-nara.pug', outerClass: 'card lazyload', innerClass: 'card-body', title: 'Altres punts d\'interés'}]
@@ -24,7 +26,7 @@ html(lang="ca")
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

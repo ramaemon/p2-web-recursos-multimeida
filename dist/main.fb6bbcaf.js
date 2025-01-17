@@ -118,24 +118,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-// import '@fortawesome/fontawesome-free/css/all.css';
-var templesList = document.querySelectorAll(".temples-menu a");
-var h1 = document.createElement("h1");
-var p = document.createElement("p");
-function addTempleDOM(transaction) {
-  // Get sign
-  var sign = transaction.amount < 0 ? '-' : '+';
-  var item = document.createElement('li');
-
-  // Add class based on value
-  item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
-  item.innerHTML = "\n      ".concat(transaction.text, " <span>").concat(sign).concat(Math.abs(transaction.amount), "</span> <button class=\"delete-btn\" onclick=\"removeTransaction(").concat(transaction.id, ")\">x</button>\n    ");
-  list.appendChild(item);
+function handleIntersection(entries) {
+  entries.map(function (entry) {
+    if (entry.isIntersecting) {
+      // Item has crossed our observation
+      // threshold - load src from data-src
+      entry.target.src = entry.target.dataset.src;
+      entry.target.classList.remove('lazyload');
+      // Job done for this item - no need to watch it!
+      observer.unobserve(entry.target);
+    }
+  });
 }
-console.log(templesList);
-templesList.addEventListener("click", function (element) {
-  preventDefault();
-  console.log(element);
+var images = document.querySelectorAll('.lazyload');
+var observer = new IntersectionObserver(handleIntersection);
+images.forEach(function (image) {
+  return observer.observe(image);
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -162,7 +160,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49456" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50535" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -307,4 +305,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
-//# sourceMappingURL=main.fb6bbcaf.js.map
+//# sourceMappingURL=/main.fb6bbcaf.js.map

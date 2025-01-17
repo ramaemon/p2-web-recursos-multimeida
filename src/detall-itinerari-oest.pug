@@ -1,13 +1,20 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Kyoto
         link(rel="stylesheet", href="css/styles.scss")
-    body
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
+    body(class="container")
+        header(class="header")
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
+                h1 Japó
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
     
-        main(class="container")
+        main
             div
                 section(class="detall-itinerari")
                     div
@@ -24,7 +31,7 @@ html(lang="ca")
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

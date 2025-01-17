@@ -1,20 +1,23 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Japó: Visita Kyoto
         link(rel="stylesheet", href="css/styles.scss")
+        script(async, src="js/main.js") 
     body
         header(class="header")
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 h1 Japó
             include  ../mixins/nav-external.pug
             +menu-nav-external()
     
         main(class="container-responsive")
             div
-                section(id="enllaços", class="lazyload")
+                section(id="enllaços")
                     h2 Enllaços
                     ul
                         li  
@@ -22,12 +25,12 @@ html(lang="ca")
                         li 
                             a(href="https://www.japan-guide.com/" target="_blank") Japan Guide
                         li
-                            a(href="https://www.freepik.com/") Imatges vectorials dissenyades per Freepik
+                            a(href="https://www.freepik.com/" target="_blank") Imatges vectorials dissenyades per Freepik
                         
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

@@ -233,7 +233,7 @@ section {
 section#portada {
   margin-top: var(--header);
   display: flex;
-  background-image: image-set(url(miyajima-tori_1400.d13f8ec6.jpg) 2x, url(miyajima-tori_1227.ba515387.jpg) 2x);
+  background-image: image-set(url(/miyajima-tori_1400.d13f8ec6.jpg) 2x, url(/miyajima-tori_1227.ba515387.jpg) 2x);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -248,7 +248,7 @@ section#portada h3 {
   font-size: 50px;
 }
 section#categoria {
-  background-image: image-set(url(kyoto_1400.6e00b2e3.jpg) 2x, url(kyoto_1325.a8fb6918.jpg) 2x);
+  background-image: image-set(url(/kyoto_1400.6e00b2e3.jpg) 2x, url(/kyoto_1325.a8fb6918.jpg) 2x);
   background-position: center;
   background-size: cover;
   padding-top: 100px;
@@ -265,7 +265,7 @@ section#categoria .categoria-menu li {
 }
 section#presentacio {
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), image-set(url(arashiyama_1400.0a904cef.jpg) 2x, url(arashiyama_1248.5190323d.jpg) 2x);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), image-set(url(/arashiyama_1400.0a904cef.jpg) 2x, url(/arashiyama_1248.5190323d.jpg) 2x);
   background-position: center;
   background-size: cover;
   padding-top: 100px;
@@ -342,43 +342,43 @@ section.itineraris a:nth-child(1) {
   background-color: #AA5486;
 }
 section.itineraris a:nth-child(1):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-este.bf37431d.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-este.bf37431d.png);
 }
 section.itineraris a:nth-child(2) {
   background-color: #FC8F54;
 }
 section.itineraris a:nth-child(2):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-oest.f72fdd87.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-oest.f72fdd87.png);
 }
 section.itineraris a:nth-child(3) {
   background-color: #3C552D;
 }
 section.itineraris a:nth-child(3):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-centre.6a2e0966.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-centre.6a2e0966.png);
 }
 section.itineraris a:nth-child(4) {
   background-color: #2A3663;
 }
 section.itineraris a:nth-child(4):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-centre.6a2e0966.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-centre.6a2e0966.png);
 }
 section.itineraris a:nth-child(5) {
   background-color: #B6A28E;
 }
 section.itineraris a:nth-child(5):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-sur.102e5689.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-sur.102e5689.png);
 }
 section.itineraris a:nth-child(6) {
   background-color: #800000;
 }
 section.itineraris a:nth-child(6):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-nara.0cf44112.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-nara.0cf44112.png);
 }
 section.itineraris a:nth-child(7) {
   background-color: #FF7777;
 }
 section.itineraris a:nth-child(7):hover {
-  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(itinerari-nara.0cf44112.png);
+  background-image: linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)), url(/itinerari-nara.0cf44112.png);
 }
 section.detall-itinerari {
   display: flex;
@@ -390,7 +390,7 @@ section.detall-itinerari div {
 }
 section#enllaços {
   display: flex;
-  background-image: url(DSC_0191.e0e30730.jpg);
+  background-image: url(/DSC_0191.e0e30730.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -431,7 +431,7 @@ section.section {
 
 .clip-path {
   position: absolute;
-  background-image: url(DSC_0260.3849c7f5.jpg);
+  background-image: url(/DSC_0260.3849c7f5.jpg);
   background-position: center;
   background-size: cover;
   width: 12%;
@@ -542,7 +542,7 @@ footer.footer {
     overflow: auto;
   }
   section#portada {
-    background-image: image-set(url(miyajima-tori_986.519b687b.jpg) 2x, url(miyajima-tori_671.0528f761.jpg) 2x);
+    background-image: image-set(url(/miyajima-tori_986.519b687b.jpg) 2x, url(/miyajima-tori_671.0528f761.jpg) 2x);
   }
   section#presentacio {
     padding-left: 50px;
@@ -664,8 +664,8 @@ footer.footer {
 }
 @media screen and (max-width: 468px) {
   section#portada {
-    background-image: image-set(url(miyajima-tori_671.0528f761.jpg) 2x, url(miyajima-tori_200.deb5fdcc.jpg) 2x);
+    background-image: image-set(url(/miyajima-tori_671.0528f761.jpg) 2x, url(/miyajima-tori_200.deb5fdcc.jpg) 2x);
   }
 }
 
-/*# sourceMappingURL=styles.5c32a3d8.css.map */
+/*# sourceMappingURL=/styles.5c32a3d8.css.map */

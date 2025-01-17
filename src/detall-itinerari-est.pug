@@ -1,27 +1,34 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Kyoto
         link(rel="stylesheet", href="css/styles.scss")
-    body
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
+    body(class="container")
+        header(class="header")
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
+                h1 Japó
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
     
         main(class="container")
             div
                 section(class="detall-itinerari")
                     div
                         h2 A l'est de Kioto
-                        p Beure aigua del temple *Kiyomizudera i gaudir del seu enorme balcó de fusta sostingut per pilars sense claus ni argamassa, amb meravelloses vistes de la ciutat i la naturalesa de la zona. I si visites la ciutat a l'agost, gaudix de la il·luminació nocturna especial del festival *Sennichi *Mairi.
-                        p Passejar per tota la zona de *Higashiyama, especialment per les costes *Sannenzaka i *Ninenzaka i els seus edificis del període Edo (incloent un Starbucks!) i pel cementeri *Higashi *Otani, ple d'espiritualitat.
-                        p Convertir-se en *maiko o *geisha (o samurai!) per unes hores en un dels múltiples estudis de *henshin de la ciutat, especialment en els quals estan prop del temple *Kiyomizudera o del barri de *geishas de *Gion.
-                        p Alternativament, lloga un quimono i passeja així vestit per tota la zona de *Higashiyama (o per on vulgues!).
+                        p Beure aigua del temple Kiyomizudera i gaudir del seu enorme balcó de fusta sostingut per pilars sense claus ni argamassa, amb meravelloses vistes de la ciutat i la naturalesa de la zona. I si visites la ciutat a l'agost, gaudix de la il·luminació nocturna especial del festival Sennichi Mairi.
+                        p Passejar per tota la zona de Higashiyama, especialment per les costes Sannenzaka i Ninenzaka i els seus edificis del període Edo (incloent un Starbucks!) i pel cementeri Higashi Otani, ple d'espiritualitat.
+                        p Convertir-se en maiko o geisha (o samurai!) per unes hores en un dels múltiples estudis de henshin de la ciutat, especialment en els quals estan prop del temple Kiyomizudera o del barri de geishas de Gion.
+                        p Alternativament, lloga un quimono i passeja així vestit per tota la zona de Higashiyama (o per on vulgues!).
                     div
-                        img(src="img/itinerari-este.png")
+                        img(src="img/itinerari-este.png", alt="Mapa itinerari est")
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()

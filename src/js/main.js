@@ -1,31 +1,16 @@
-// import '@fortawesome/fontawesome-free/css/all.css';
-const templesList = document.querySelectorAll(".temples-menu a");
-const h1 = document.createElement("h1");
-const p = document.createElement("p");
-
-function addTempleDOM(transaction) {
-    // Get sign
-    const sign = transaction.amount < 0 ? '-' : '+';
-  
-    const item = document.createElement('li');
-  
-    // Add class based on value
-    item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
-  
-    item.innerHTML = `
-      ${transaction.text} <span>${sign}${Math.abs(
-      transaction.amount
-    )}</span> <button class="delete-btn" onclick="removeTransaction(${
-      transaction.id
-    })">x</button>
-    `;
-  
-    list.appendChild(item);
+function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      // Item has crossed our observation
+      // threshold - load src from data-src
+      entry.target.src = entry.target.dataset.src;
+      entry.target.classList.remove('lazyload');
+      // Job done for this item - no need to watch it!
+      observer.unobserve(entry.target);
+    }
+  });
 }
 
-console.log(templesList);
-templesList.addEventListener("click", (element) => {
-  preventDefault();
-  console.log(element);
-  
-});
+const images = document.querySelectorAll('.lazyload');
+const observer = new IntersectionObserver(handleIntersection);
+images.forEach(image => observer.observe(image));

@@ -1,11 +1,18 @@
 doctype html
 html(lang="ca")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Kyoto
         link(rel="stylesheet", href="css/styles.scss")
-    body
-        include  ../mixins/nav-external.pug
-        +menu-nav-external()
+    body(class="container")
+        header(class="header")
+            div
+                a(href="index.pug") 
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
+                h1 Japó
+            include  ../mixins/nav-external.pug
+            +menu-nav-external()
     
         main(class="container")
             div
@@ -14,16 +21,16 @@ html(lang="ca")
                         h2 Al nord de Kioto
                         p Visitar el santuari Shimogamo, el més antic del país i un dels dos santuaris del riu *Kamo que protegixen la ciutat del mal auguri.
                         p Pujar al cim del mont Hiei, on es troba el temple Enryakuji. I, de baixada, gaudir de l'ambient tradicional de Sakamoto, a la vora del llac Biwa.
-                        p Passejar pels llogarets tradicionals de Kibune i Kurama. Si t'agrada la naturalesa i els passejos agradables per la muntanya, és recomanable fer la i el passeig entre *Kibune i Kurama caminant.
-                        p Especialment en època de *momiji, prendre el tren a Kibune i Kurama per a gaudir del túnel de momiji, un tram replet d'aurons pel qual el tren passa més lent i s'il·lumina a la nit.
-                        p Gaudir dels banys termals o *onsen del nord de Kyoto, coneguts per la qualitat de les seues aigües i pels rotenburo o banys a l'aire lliure, en plena naturalesa.
-                        p Visitar el poble de Ohara que oferix ambient rural en plena naturalesa i temples espectaculars com el temple *Sanzen-*in o el temple Jakko-in.
+                        p Passejar pels llogarets tradicionals de Kibune i Kurama. Si t'agrada la naturalesa i els passejos agradables per la muntanya, és recomanable fer la i el passeig entre Kibune i Kurama caminant.
+                        p Especialment en època de momiji, prendre el tren a Kibune i Kurama per a gaudir del túnel de momiji, un tram replet d'aurons pel qual el tren passa més lent i s'il·lumina a la nit.
+                        p Gaudir dels banys termals o onsen del nord de Kyoto, coneguts per la qualitat de les seues aigües i pels rotenburo o banys a l'aire lliure, en plena naturalesa.
+                        p Visitar el poble de Ohara que oferix ambient rural en plena naturalesa i temples espectaculars com el temple Sanzen-in o el temple Jakko-in.
                     div
-                        img(src="img/itinerari-nord.png")
+                        img(src="img/itinerari-nord.png", alt="Mapa itinerari nord")
         footer
             div
                 a(href="index.pug") 
-                    img(src="img/tori-logo.svg")
+                    img(src="img/tori-logo.svg", alt="Tori: logotip web")
                 span Rafael Maestre i Montañana
             include  ../mixins/footer.pug
             +footer()
