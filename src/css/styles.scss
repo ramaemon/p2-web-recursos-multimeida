@@ -254,8 +254,8 @@ section {
         margin-top: var(--header);
         display: flex;
         background-image: image-set(
-            url(../img/miyajima-tori_1400.jpg) 2x,
-            url(../img/miyajima-tori_1227.jpg) 2x
+            url(../img/miyajima-tori_1400.webp) 2x,
+            url(../img/miyajima-tori_1227.webp) 2x
         );
         background-position: center;
         background-size: cover;
@@ -272,8 +272,8 @@ section {
     }
     &#categoria {
         background-image: image-set(
-            url(../img/kyoto_1400.jpg) 2x,
-            url(../img/kyoto_1325.jpg) 2x
+            url(../img/kyoto_1400.webp) 2x,
+            url(../img/kyoto_1325.webp) 2x
         );
         background-position: center;
         background-size: cover;
@@ -294,8 +294,8 @@ section {
         background-image: 
         linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
         image-set(
-            url(../img/arashiyama_1400.jpg) 2x,
-            url(../img/arashiyama_1248.jpg) 2x
+            url(../img/arashiyama_1400.webp) 2x,
+            url(../img/arashiyama_1248.webp) 2x
         );
         background-position: center;
         background-size: cover;
@@ -378,7 +378,10 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-este.png);
+                    image-set(
+                        url(../img/itinerari-este.webp) 2x,
+                        url(../img/itinerari-este_200.webp) 2x
+                    );
                 }
             }
             &:nth-child(2) {
@@ -386,7 +389,10 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-oest.png);
+                    image-set(
+                        url(../img/itinerari-este.webp) 2x,
+                        url(../img/itinerari-este_200.webp) 2x
+                    );
                 }
             }
             &:nth-child(3) {
@@ -394,7 +400,9 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-centre.png);
+                    image-set(
+                        url(../img/itinerari-centre.webp) 2x
+                    );
                 }
             }
             &:nth-child(4) {
@@ -402,7 +410,9 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-centre.png);
+                    image-set(
+                        url(../img/itinerari-centre.webp) 2x
+                    );
                 }
             }
             &:nth-child(5) {
@@ -410,7 +420,11 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-sur.png);
+                    image-set(
+                        url(../img/itinerari-sur_490.webp) 2x,
+                        url(../img/itinerari-sur_312.webp) 2x,
+                        url(../img/itinerari-sur_200.webp) 2x
+                    );
                 }
             }
             &:nth-child(6) {
@@ -418,7 +432,11 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-nara.png);
+                    image-set(
+                        url(../img/itinerari-nara_498.webp) 2x,
+                        url(../img/itinerari-nara_318.webp) 2x,
+                        url(../img/itinerari-nara_200.webp) 2x
+                    );
                 }
             }
             &:nth-child(7) {
@@ -426,7 +444,11 @@ section {
                 &:hover {
                     background-image: 
                     linear-gradient(to bottom, rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.99)),
-                    url(../img/itinerari-nara.png);
+                    image-set(
+                        url(../img/itinerari-nord_556.webp) 2x,
+                        url(../img/itinerari-nord_360.webp) 2x,
+                        url(../img/itinerari-nord_200.webp) 2x
+                    );
                 }
             }
         }
@@ -442,7 +464,12 @@ section {
     }
     &#enllaços {
         display: flex;
-        background-image: url(../img/DSC_0191.jpg);
+        background-image: image-set(
+            url(../img/miyajima-shrink_1400.webp) 2x,
+            url(../img/miyajima-shrink_1249.webp) 2x,
+            url(../img/miyajima-shrink_942.webp) 2x,
+            url(../img/miyajima-shrink_529.webp) 2x
+        );;
         background-position: center;
         background-size: cover;
         text-align: center;
