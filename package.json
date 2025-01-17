@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "parcel:dev": "parcel src/index.pug",
+    "parcel:dev": "parcel src/index.pug --public-url ./",
     "parcel:build": "parcel build src/index.pug --public-url ./",
     "clean": "rimraf dist .parcel-cache",
     "start": "npm-run-all clean parcel:dev",
